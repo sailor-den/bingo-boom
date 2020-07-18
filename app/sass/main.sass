@@ -1,0 +1,123 @@
+@import vars
+@import fonts
+@import libs
+
+* 
+	box-sizing: border-box
+
+body
+	font-size: 16px
+	position: relative
+	line-height: 1.65
+	font-family: 'Arial', sans-serif
+	overflow-x: hidden
+	color: #ffffff
+
+	
+.content
+	width: 378px
+	height: 685px
+	margin: auto
+	padding: 21px
+	background-color: #F4F1E9
+	transition: background-color .3s ease 
+
+.card
+	height: 601px
+	width: 336px
+	display: flex
+	margin: auto
+	flex-direction: column
+	justify-content: space-between
+	&__picture
+		margin-bottom: 55px
+	&__img
+		display: block
+		margin: auto
+		max-width: 100%
+		// height: auto
+		max-height: 100%
+		border-radius: 8px
+		overflow: hidden
+		&:hover
+			cursor: pointer
+	&__title
+		margin-top: 0
+		margin-bottom: 35px
+		text-align: center
+		font-size: 22px
+		line-height: 28px
+		letter-spacing: -0.1px
+		color: $blue
+		transition: color .3s ease 
+	&__wrapper-btn
+		margin-bottom: 24px
+	&__btn
+		position: relative
+		overflow: hidden
+		display: block
+		margin: 0 auto
+		width: 100%
+		border-radius: 8px
+		padding: 15px 20px
+		border: none
+		outline: none
+		font-family: 'Poppins', sans-serif
+		font-size: 17px
+		line-height: 25px
+		color: #fff
+		text-transform: uppercase
+		text-align: center
+		background-color: $blue
+		box-shadow: 0px 1px 10px rgba(43, 35, 76, 0.3)
+		transition: opacity .3s
+		transition: background-color .3s ease, box-shadow .3s ease, opacity .3s ease
+		&:hover
+			opacity: .7
+			cursor: pointer
+	&__wrapper-link
+		text-align: center
+		margin-bottom: 21px
+	&__link
+		font-family: 'Roboto', sans-serif
+		font-style: italic
+		font-size: 15px
+		line-height: 18px
+		text-align: center
+		color: $blue
+		letter-spacing: -0.08px
+		text-decoration: none
+		transition: opacity .3s ease, color .3s ease
+		&:hover
+			opacity: .7
+		
+.dark-theme
+	background-color: #1A133C
+	.card
+		&__title
+			color: #ffffff
+		&__btn
+			background-color: #D259F5
+			box-shadow: 0px 1px 10px rgba(210, 89, 245, 0.6)
+		&__link
+			color: #D259F5
+
+
+.pulse 
+	background-color:#dba5ea
+	border-radius: 50%
+	animation: pulse .7s ease-out
+	transform: scale(0)
+	position: absolute
+    
+
+@keyframes pulse 
+	to 
+		transform: scale(2)
+		background-color: #fff
+		opacity: 0
+    
+
+// @media (max-height: 685px)
+// 	.content
+		
