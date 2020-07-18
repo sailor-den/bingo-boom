@@ -1,2 +1,3 @@
 # bingo-boom
- Тестовое задание
+ Тестовое задание <br>
+ HTML, CSS, JS + Gulp
